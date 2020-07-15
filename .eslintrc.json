@@ -33,6 +33,7 @@
     "@typescript-eslint/prefer-interface": "off",
     "@typescript-eslint/interface-name-prefix": "off",
     "@typescript-eslint/camelcase": "off",
+    "react/prop-types": "off",
     "simple-import-sort/sort": "warn",
     "no-console": "off",
     "sort-keys": "off",
