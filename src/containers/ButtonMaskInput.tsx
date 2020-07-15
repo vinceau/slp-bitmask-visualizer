@@ -6,7 +6,7 @@ import { ControllerDisplay } from "../components/ControllerDisplay";
 import { ButtonInput } from "react-gamecube";
 import { BitmaskDisplay } from "../components/BitmaskDisplay";
 
-export const ButtonMaskInput = () => {
+export const ButtonMaskInput: React.FC = () => {
   const { state, dispatch } = useContext(AppContext);
   const [error, setError] = useState<string>("");
 
