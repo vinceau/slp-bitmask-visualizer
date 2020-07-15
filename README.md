@@ -4,7 +4,7 @@
 
 ![screenshot](/docs/screenshot.png)
 
-[Click here](https://vinceau.github.io/slp-button-visualizer) to try it out!
+[Click here](https://vinceau.github.io/slp-bitmask-visualizer) to try it out!
 
 ### Features
 
