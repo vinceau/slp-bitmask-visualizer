@@ -1,7 +1,7 @@
 import { InputBit, inputBitToName } from "./types";
 
 const generateInputBitmaskFromBit = (...buttons: InputBit[]): number => {
-  return buttons.reduce((a, b) => a | b);
+  return buttons.reduce((a, b) => a | b, 0);
 };
 
 export const generateInputBitmask = (...buttons: string[]): number => {
