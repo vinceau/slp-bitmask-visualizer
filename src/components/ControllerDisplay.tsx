@@ -4,9 +4,10 @@ import { buttonsToControllerState } from "../lib/buttonsToController";
 
 export interface ControllerDisplayProps {
   buttons: ButtonInput[];
+  onClick?: (input: ButtonInput) => void;
 }
 
-export const ControllerDisplay: React.FC<ControllerDisplayProps> = ({ buttons }) => {
+export const ControllerDisplay: React.FC<ControllerDisplayProps> = ({ buttons, onClick }) => {
   const state = buttonsToControllerState(buttons);
-  return <Controller value={state} hideAnalogSticks={true} />;
+  return <Controller value={state} hideAnalogSticks={true} onClick={onClick} />;
 };

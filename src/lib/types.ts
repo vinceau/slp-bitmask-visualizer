@@ -28,17 +28,3 @@ export const inputBitToName = new Map<string, InputBit>()
   .set(ButtonInput.X, InputBit.X)
   .set(ButtonInput.Y, InputBit.Y)
   .set(ButtonInput.START, InputBit.START);
-
-export const nameToInputBit = new Map<InputBit, string>()
-  .set(InputBit.D_LEFT, ButtonInput.D_LEFT)
-  .set(InputBit.D_RIGHT, ButtonInput.D_RIGHT)
-  .set(InputBit.D_DOWN, ButtonInput.D_DOWN)
-  .set(InputBit.D_UP, ButtonInput.D_UP)
-  .set(InputBit.Z, ButtonInput.Z)
-  .set(InputBit.R, ButtonInput.R)
-  .set(InputBit.L, ButtonInput.L)
-  .set(InputBit.A, ButtonInput.A)
-  .set(InputBit.B, ButtonInput.B)
-  .set(InputBit.X, ButtonInput.X)
-  .set(InputBit.Y, ButtonInput.Y)
-  .set(InputBit.START, ButtonInput.START);
