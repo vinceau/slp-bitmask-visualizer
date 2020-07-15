@@ -8,9 +8,9 @@
 
 ### Features
 
-* Convert from bit mask to button inputs
+* Convert from bitmask to button inputs
 * Convert from button inputs to bitmask
-* Shows bitmask is hex, decimal, and binary
+* Shows bitmask as hex, decimal, and binary
 
 ## Development
 
