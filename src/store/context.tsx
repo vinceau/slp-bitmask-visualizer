@@ -1,5 +1,5 @@
 import React, { createContext, useReducer, Dispatch } from "react";
-import { productReducer, ProductActions } from "./reducers";
+import { reducer, ReducerActions } from "./reducers";
 import { InitialStateType } from "./types";
 
 const initialState: InitialStateType = {
@@ -9,13 +9,13 @@ const initialState: InitialStateType = {
 
 const AppContext = createContext<{
   state: InitialStateType;
-  dispatch: Dispatch<ProductActions>;
+  dispatch: Dispatch<ReducerActions>;
 }>({
   state: initialState,
   dispatch: () => null,
 });
 
-const mainReducer = (state: InitialStateType, action: ProductActions) => productReducer(state, action);
+const mainReducer = (state: InitialStateType, action: ReducerActions) => reducer(state, action);
 
 const AppProvider: React.FC = ({ children }) => {
   const [state, dispatch] = useReducer(mainReducer, initialState);

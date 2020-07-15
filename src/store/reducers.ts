@@ -17,40 +17,27 @@ type ActionMap<M extends { [index: string]: any }> = {
 export enum Types {
   SetBitmask = "SET_BITMASK",
   ToggleButton = "TOGGLE_BUTTON",
-  Delete = "DELETE_PRODUCT",
-  Add = "ADD_PRODUCT",
 }
 
-// Product
-
-type ProductType = {
-  id: number;
-  name: string;
-  price: number;
-};
-
-type ProductPayload = {
+type ActionPayload = {
   [Types.SetBitmask]: {
     mask: number;
   };
   [Types.ToggleButton]: {
     button: ButtonInput;
   };
-  [Types.Delete]: {
-    id: number;
-  };
 };
 
-export type ProductActions = ActionMap<ProductPayload>[keyof ActionMap<ProductPayload>];
+export type ReducerActions = ActionMap<ActionPayload>[keyof ActionMap<ActionPayload>];
 
-export const productReducer = (state: InitialStateType, action: ProductActions) => {
+export const reducer = (state: InitialStateType, action: ReducerActions) => {
   switch (action.type) {
     case Types.SetBitmask:
       const { payload } = action;
-      const newProducts = { ...state };
-      newProducts.mask = payload.mask;
-      newProducts.buttons = bitmaskToButtons(payload.mask);
-      return newProducts;
+      const newState = { ...state };
+      newState.mask = payload.mask;
+      newState.buttons = bitmaskToButtons(payload.mask);
+      return newState;
     case Types.ToggleButton:
       const { button } = action.payload;
       let newButtons = [...state.buttons];
