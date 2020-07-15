@@ -1,7 +1,10 @@
+/** @jsx jsx */
+import { css, jsx } from "@emotion/core";
 import React, { useContext, useState } from "react";
 import { Types, AppContext } from "../store";
 import { ControllerDisplay } from "../components/ControllerDisplay";
 import { ButtonInput } from "react-gamecube";
+import { BitmaskDisplay } from "../components/BitmaskDisplay";
 
 export const ButtonMaskInput = () => {
   const { state, dispatch } = useContext(AppContext);
@@ -36,11 +39,44 @@ export const ButtonMaskInput = () => {
 
   return (
     <div>
-      <div>{state.mask}</div>
-      <input onChange={({ target }) => onChange(target.value)} />
-      <div>{error}</div>
-      <p>{state.buttons.join(" + ")}</p>
+      <div
+        css={css`
+          margin: 20px 0;
+        `}
+      >
+        <input
+          css={css`
+            border: solid 1px white;
+            background: transparent;
+            border-radius: 5px;
+            padding: 10px 20px;
+            color: white;
+            margin-bottom: 5px;
+            width: 250px;
+            max-width: 100%;
+            font-size: 16px;
+          `}
+          onChange={({ target }) => onChange(target.value)}
+          placeholder="Enter a decimal bitmask here"
+        />
+        <div>{error}</div>
+      </div>
+      <div
+        css={css`
+          margin-bottom: 40px;
+        `}
+      >
+        <BitmaskDisplay mask={state.mask} />
+      </div>
       <ControllerDisplay buttons={state.buttons} onClick={onButtonClick} />
+      <div
+        css={css`
+          font-size: 24px;
+          margin-top: 20px;
+        `}
+      >
+        {state.buttons.join(" + ")}
+      </div>
     </div>
   );
 };
