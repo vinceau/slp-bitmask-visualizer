@@ -1,4 +1,4 @@
-# SLP Button Visualizer
+# Slippi Bitmask Input Visualizer
 
 > A tool for visualizing Slippi button input bitmasks
 
