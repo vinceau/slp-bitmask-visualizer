@@ -1,7 +1,6 @@
 import React from "react";
 import { bitmaskToButtons } from "../lib/bitmaskToButtons";
 import { ControllerDisplay } from "./ControllerDisplay";
-import { Controller } from "react-gamecube";
 
 export const ButtonMaskInput: React.FC = () => {
   const [error, setError] = React.useState<string>("");
