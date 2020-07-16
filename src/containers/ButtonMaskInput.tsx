@@ -59,7 +59,13 @@ export const ButtonMaskInput: React.FC = () => {
           onChange={({ target }) => onChange(target.value)}
           placeholder="Enter a decimal bitmask here"
         />
-        <div>{error}</div>
+        <div
+          css={css`
+            min-height: 21px;
+          `}
+        >
+          {error}
+        </div>
       </div>
       <div
         css={css`
@@ -73,6 +79,7 @@ export const ButtonMaskInput: React.FC = () => {
         css={css`
           font-size: 24px;
           margin-top: 20px;
+          min-height: 32px;
         `}
       >
         {state.buttons.join(" + ")}
