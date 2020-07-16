@@ -5,6 +5,7 @@ import { Types, AppContext } from "../store";
 import { ControllerDisplay } from "../components/ControllerDisplay";
 import { ButtonInput } from "react-gamecube";
 import { BitmaskDisplay } from "../components/BitmaskDisplay";
+import { OrderedButtonPreview } from "../components/OrderedButtonPreview";
 
 export const ButtonMaskInput: React.FC = () => {
   const { state, dispatch } = useContext(AppContext);
@@ -82,7 +83,7 @@ export const ButtonMaskInput: React.FC = () => {
           min-height: 32px;
         `}
       >
-        {state.buttons.join(" + ")}
+        <OrderedButtonPreview value={state.buttons} />
       </div>
     </div>
   );
