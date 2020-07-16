@@ -26,9 +26,9 @@ export const BitmaskDisplay: React.FC<BitmaskDisplayProps> = ({ mask }) => {
         grid-template-columns: 1fr 1fr 1fr;
       `}
     >
-      <MaskDisplay title="Hexadecimal">0x{mask.toString(16)}</MaskDisplay>
-      <MaskDisplay title="Decimal">{mask.toString()}</MaskDisplay>
       <MaskDisplay title="Binary">0b{mask.toString(2).padStart(16, "0")}</MaskDisplay>
+      <MaskDisplay title="Decimal">{mask.toString()}</MaskDisplay>
+      <MaskDisplay title="Hexadecimal">0x{mask.toString(16)}</MaskDisplay>
     </div>
   );
 };
