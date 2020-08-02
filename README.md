@@ -2,7 +2,7 @@
 
 > A tool for visualizing Slippi button input bitmasks
 
-[![screenshot](https://i.imgur.com/fRpKulh.png)](https://vinceau.github.io/slp-bitmask-visualizer)
+[![screenshot](https://i.imgur.com/BFrGJSI.png)](https://vinceau.github.io/slp-bitmask-visualizer)
 
 [Click here](https://vinceau.github.io/slp-bitmask-visualizer) to try it out!
 
